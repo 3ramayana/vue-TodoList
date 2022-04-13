@@ -12,9 +12,9 @@
                 >
               </h3>
 
-              <div class="row">
-                <div class="col-10">
-                  <div class="form-floating mb-3">
+              <form class="row align-items-center mb-3 gy-2">
+                <div class="col-sm-12 col-md-10">
+                  <div class="form-floating">
                     <input
                       type="text"
                       class="form-control fs-4"
@@ -26,18 +26,19 @@
                     <label for="floatingInput">What's your plan today?</label>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-sm-12 col-md-2">
                   <div class="d-grid">
                     <button
                       type="button"
                       class="btn btn-primary btn-lg"
                       @click="addTodo"
                     >
+                      <font-awesome-icon icon="circle-plus" />
                       ADD
                     </button>
                   </div>
                 </div>
-              </div>
+              </form>
 
               <List
                 :todos="todos"
