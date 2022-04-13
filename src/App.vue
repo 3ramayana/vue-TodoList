@@ -1,58 +1,57 @@
 <template>
-  <section class="gradient-custom-2">
-    <div class="container py-5">
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col col-xl-10">
-          <div class="card rounded">
-            <div class="card-body p-5">
-              <h3 class="mb-3 fw-bold">
-                Todo List
-                <span class="badge bg-primary rounded-pill ms-3 fs-6 fw-normal"
-                  >{{ totalTodo }} task</span
-                >
-              </h3>
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col col-xl-10">
+        <div class="card rounded">
+          <div class="card-body p-5">
+            <h3 class="mb-3 fw-bold">
+              Todo List
+              <span class="badge bg-primary rounded-pill ms-3 fs-6 fw-normal"
+                >{{ totalTodo }} task</span
+              >
+            </h3>
 
-              <form class="row align-items-center mb-3 gy-2">
-                <div class="col-sm-12 col-md-10">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control fs-4"
-                      id="floatingInput"
-                      placeholder="Todos"
-                      autocomplete="off"
-                      v-model="todo"
-                      @keyup.enter="addTodo"
-                    />
-                    <label for="floatingInput">What's your plan today?</label>
-                  </div>
+            <form
+              @submit.prevent="addTodo"
+              class="row align-items-center mb-3 gy-2"
+            >
+              <div class="col-sm-12 col-md-10">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control fs-4"
+                    id="floatingInput"
+                    placeholder="Todos"
+                    autocomplete="off"
+                    v-model="todo"
+                  />
+                  <label for="floatingInput">What's your plan today?</label>
                 </div>
-                <div class="col-sm-12 col-md-2">
-                  <div class="d-grid">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-lg"
-                      @click="addTodo"
-                      :disabled="todo.length === 0"
-                    >
-                      <font-awesome-icon icon="circle-plus" />
-                      ADD
-                    </button>
-                  </div>
+              </div>
+              <div class="col-sm-12 col-md-2">
+                <div class="d-grid">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg"
+                    :disabled="todo.length === 0"
+                  >
+                    <font-awesome-icon icon="circle-plus" />
+                    ADD
+                  </button>
                 </div>
-              </form>
+              </div>
+            </form>
 
-              <List
-                :todos="todos"
-                @deleteTodo="deleteTodo"
-                @doneTodo="doneTodo"
-              />
-            </div>
+            <List
+              :todos="todos"
+              @deleteTodo="deleteTodo"
+              @doneTodo="doneTodo"
+            />
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
