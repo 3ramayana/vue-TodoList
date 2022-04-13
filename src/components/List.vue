@@ -20,16 +20,16 @@ export default {
 <template>
   <ul class="list-group list-group-flush">
     <li class="list-group-item" v-for="(todo, index) in todos" :key="index">
-      <div class="row">
+      <div class="row gy-2">
         <div
-          class="col-auto me-auto align-self-center fs-5"
+          class="col-sm-12 col-md-auto me-auto align-self-center fs-5"
           :class="{ 'text-decoration-line-through text-muted': todo.isDone }"
         >
           {{ todo.activity }}
         </div>
-        <div class="col-auto">
+        <div class="col-sm-12 col-md-auto">
           <div class="row gx-2">
-            <div class="col">
+            <div class="col-auto">
               <button
                 class="btn"
                 :class="[
@@ -40,7 +40,7 @@ export default {
                 <font-awesome-icon icon="circle-check" />
               </button>
             </div>
-            <div class="col">
+            <div class="col-auto">
               <button
                 class="btn"
                 :class="[

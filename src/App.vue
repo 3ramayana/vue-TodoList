@@ -20,6 +20,7 @@
                       class="form-control fs-4"
                       id="floatingInput"
                       placeholder="Todos"
+                      autocomplete="off"
                       v-model="todo"
                       @keyup.enter="addTodo"
                     />
@@ -32,6 +33,7 @@
                       type="button"
                       class="btn btn-primary btn-lg"
                       @click="addTodo"
+                      :disabled="todo.length === 0"
                     >
                       <font-awesome-icon icon="circle-plus" />
                       ADD
