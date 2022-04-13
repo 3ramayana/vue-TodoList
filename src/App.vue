@@ -1,7 +1,7 @@
 <template>
   <section class="gradient-custom-2">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
         <div class="col col-xl-10">
           <div class="card rounded">
             <div class="card-body p-5">
@@ -23,9 +23,7 @@
                       v-model="todo"
                       @keyup.enter="addTodo"
                     />
-                    <label for="floatingInput"
-                      >What do you need to do today?</label
-                    >
+                    <label for="floatingInput">What's your plan today?</label>
                   </div>
                 </div>
                 <div class="col-2">
