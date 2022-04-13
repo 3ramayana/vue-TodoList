@@ -1,7 +1,7 @@
 <template>
   <div class="container py-5">
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col col-xl-10">
+      <div class="col-10">
         <div class="card rounded">
           <div class="card-body p-5">
             <h3 class="mb-3 fw-bold">
